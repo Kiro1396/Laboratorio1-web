@@ -1,0 +1,162 @@
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NUEVO: Forzamos a la pantalla a ocupar el 100% de la altura visible */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;         /* NUEVO: Convierte el cuerpo en contenedor flexible */
+    flex-direction: column; /* NUEVO: Organiza los bloques de arriba a abajo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+/* --- Encabezado con color institucional de la UTP --- */
+header {
+    background-color: #5c2483; 
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Menú de Navegación Estilizado --- */
+nav {
+    background-color: #2f3640;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #008f39; /* Color verde de realce */
+}
+
+/* --- Cuerpo Principal de Contenido --- */
+main {
+    flex: 1; /* NUEVO: Estira la sección central para empujar el footer al fondo */
+    width: 100%; /* NUEVO: Asegura que ocupe todo el ancho */
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #5c2483;
+    border-bottom: 2px solid #5c2483;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Tarjetas de Presentación (Index.html) --- */
+.integrantes {
+    display: flex;
+    gap: 1.5rem;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.integrantes article {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #5c2483;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #431961;
+}
+
+/* --- Listas --- */
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Galería Multimedia Basica --- */
+.galeria {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Alinea los cuadros por la parte superior */
+}
+
+.galeria figure {
+    background: #fdfdfd;
+    border: 1px solid #dcdde1;
+    padding: 0.5rem;
+    width: 45%; /* Cambiado de max-width a width fijo para simetría */
+    text-align: center;
+    border-radius: 4px;
+}
+
+.galeria img {
+    width: 100%;       /* Ocupa todo el ancho de su cuadro */
+    height: 350px;     /* ALTURA FIJA: Ajusta este número (ej. 300px o 350px) a tu gusto */
+    object-fit: cover; /* MAGIA: Recorta los bordes sobrantes para que no se estiren */
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    border-radius: 2px;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #718093;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #222;
+    color: #f5f6fa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* MODIFICADO: De '2rem' a 'auto' para que responda a Flexbox */
+}
